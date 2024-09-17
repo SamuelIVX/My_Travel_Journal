@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Uses mapping, props, components, txt files, etc
 
-Created by the help of freeCodeCamp,org
+Created by the help of freeCodeCamp,org# Travel_Journal
