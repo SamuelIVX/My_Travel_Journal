@@ -3,9 +3,9 @@ import React from "react"
 export default function Card(props){
     return(
         <div className="card">
-            <img src ={`../images/${props.item.imageUrl}`} className="card--img"/>
+            <img src ={`../images/${props.item.imageUrl}`} alt="" className="card--img"/>
             <div className="card--properties">
-                <img src="../images/locationdrop.png" className="card--location"/>
+                <img src="../images/locationdrop.png" alt ="" className="card--location"/>
                     <span className="location">{props.item.location}</span>
                     <span><a href={props.item.googleMapsUrl} className="googleMaps"> View on Google Maps</a></span>
                 <h1 className="card--title">{props.item.title}</h1>
