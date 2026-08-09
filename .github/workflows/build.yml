@@ -70,11 +70,15 @@ jobs:
 
       - name: Verify Deployment
         run: |
-          sleep 15
           url="https://samuelivx.github.io/My_Travel_Journal/"
-          status="$(curl --silent --output /dev/null --write-out "%{http_code}" "$url")"
-          if [ "$status" -ne 200 ]; then
-            echo "Deployed URL returned $status, expected 200"
-            exit 1
-          fi
-          echo "Deployed URL returned 200 OK"
+          for attempt in {1..12}; do
+            status="$(curl --silent --show-error --connect-timeout 5 --max-time 15 \
+              --output /dev/null --write-out "%{http_code}" "$url" || true)"
+            if [ "$status" = "200" ]; then
+              echo "Deployed URL returned 200 OK"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Deployed URL returned $status, expected 200"
+          exit 1
