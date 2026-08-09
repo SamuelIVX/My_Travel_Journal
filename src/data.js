@@ -1,4 +1,4 @@
-export default [
+const destinations = [
     {
         id: 1,
         title: "Mount Fiji",
@@ -30,3 +30,5 @@ export default [
         imageUrl: "../images/norway.jpeg"
     },
 ]
+
+export default destinations
