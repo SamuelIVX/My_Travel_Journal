@@ -13,7 +13,7 @@
     {
       "matchManagers": ["npm"],
       "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["patch"],
+      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
       "automergeType": "pr"
     },
