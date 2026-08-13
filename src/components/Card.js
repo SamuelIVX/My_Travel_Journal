@@ -8,7 +8,11 @@ import React from "react"
  * Renders a single destination card from its props.item payload.
  * @param {object} props - React props.
  * @param {object} props.item - Destination fields (title, location, dates, etc.).
- * @param {string} props.item.imageUrl - Value interpolated into ``../images/${imageUrl}``.
+ * @param {number} props.item.id - Stable destination id (used by App as the React key).
+ * @param {string} props.item.imageUrl - Value interpolated as ``../images/${imageUrl}``
+ *   for the photo `src`. Current `data.js` entries already include a `../images/`
+ *   prefix (e.g. `../images/japan.jpeg`), so the resolved path is redundant but
+ *   matches existing runtime behavior.
  * @param {string} props.item.location - Country / region label.
  * @param {string} props.item.googleMapsUrl - External maps link.
  * @param {string} props.item.title - Destination name (heading).
