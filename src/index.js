@@ -1,3 +1,6 @@
+/**
+ * CRA entry point: mounts <App /> onto #root and loads global styles.
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';

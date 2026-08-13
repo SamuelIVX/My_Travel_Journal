@@ -1,3 +1,26 @@
+/**
+ * Static destination catalog for My Travel Journal.
+ * Default-exported array consumed by App to drive Card rendering — no network.
+ */
+
+/**
+ * Hand-curated list of visited places shown on the journal homepage.
+ * Each entry supplies the fields Card reads (id, title, location, maps URL,
+ * dates, description, imageUrl).
+ * @type {Array<{
+ *   id: number,
+ *   title: string,
+ *   location: string,
+ *   googleMapsUrl: string,
+ *   startDate: string,
+ *   endDate: string,
+ *   description: string,
+ *   imageUrl: string
+ * }>}
+ * @example
+ * import destinations from './data.js'
+ * destinations.map((item) => item.title)
+ */
 const destinations = [
     {
         id: 1,

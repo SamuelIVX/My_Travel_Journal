@@ -1,3 +1,6 @@
+/**
+ * Smoke test: App renders the journal title and each destination heading.
+ */
 import { render, screen } from "@testing-library/react"
 import "@testing-library/jest-dom"
 import App from "./App"
